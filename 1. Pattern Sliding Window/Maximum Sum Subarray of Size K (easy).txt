@@ -15,5 +15,16 @@ Output: 7
 Explanation: Subarray with maximum sum is [3, 4].
 '''
 
+'''
+approach:
+let start_idx = 0
+Then windowEndIdx = start_idx + k
+if (windowEndIdx > len)
+  break
+else  
+  let maybeMaxSum = sum of all elements from start_idx to windowEndIdx
+  increment the start_idx by 1
+  repeat
 
+'''
 

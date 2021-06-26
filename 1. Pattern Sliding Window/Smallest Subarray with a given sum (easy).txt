@@ -21,4 +21,25 @@ Output: 3
 Explanation: Smallest subarrays with a sum greater than or equal to '8' are [3, 4, 1] or [1, 1, 6].
 '''
 
+'''
+
+possible approach
+
+iterate over array. this is sliding window of size 0
+
+consider a sliding window of size 1 (1 element only)
+ try sliding window [0,1]
+ try sliding window [1,2]
+ ....
+ try sliding window [4,5]
+  if you find the sum >= S, output 2 and return
+  
+then consider a sliding window of size 2
+
+then consider a sliding window of size 4
+
+break when sliding window size is larger than array size
+
+'''
+
 
