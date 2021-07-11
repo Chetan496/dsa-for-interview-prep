@@ -21,3 +21,14 @@ This can be done if we start with the second letter: ['B', 'C', 'B', 'B', 'C']
 '''
 
 
+'''
+thoughts
+
+for every sliding window find out max number of fruits that can be collected in two baskets
+repeat this for all slidiing windows
+
+find sliding subarrays which have only two fruits max, if they have more than that, then skip it
+O(n) time to find how many unique fruits in subarray
+If you find only two , then return the length of that arry
+
+'''

@@ -9,7 +9,7 @@ def maxSumOfSubArray(input_list, windowSize):
             maxSum = currentSum
         startIdx = startIdx + 1
     return maxSum
-            
+
 
 def subArraySum(input_list, startIdx, windowSize):
     i = startIdx
@@ -20,11 +20,13 @@ def subArraySum(input_list, startIdx, windowSize):
         i = i + 1
     return sum
 
+
 def main():
     inputArray = [2,3,4,1,5]
     k = 2
     maxSum = maxSumOfSubArray(inputArray,k)
     print(maxSum)
 
+    
 if __name__ == "__main__":
     main()
