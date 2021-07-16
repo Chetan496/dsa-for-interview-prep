@@ -18,7 +18,7 @@ def squaresOfSortedArray(sorted_array):
         if (firstArray[idx1] < secondArray[idx2] ):
            mergedArray.append(firstArray[idx1])
            idx1 = idx1 - 1
-        else:
+        else: 
            mergedArray.append(secondArray[idx2])
            idx2 = idx2 + 1
 
