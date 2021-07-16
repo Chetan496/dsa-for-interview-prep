@@ -16,4 +16,13 @@ Explanation: There are two unique triplets whose sum is equal to zero.
 '''
 
 
+'''
+for every negative number, find a pair which has sum equal to magnitude of negative number but opoosite in sign
+
+thing is triplet needs to have atleast one negative num.
+
+
+sorting the array would greatly help
+
+'''
 
