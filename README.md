@@ -1,1 +1,1 @@
-### Assignments from Grokking coding
+### Practicing DSA and algos
