@@ -9,7 +9,6 @@
 # Definition for singly-linked list.
 from typing import Optional
 
-
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -17,16 +16,28 @@ class ListNode:
 
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        prev = None 
         curr = head  
-        while curr.next != None:      
+        while curr != None:      
+            nextNode = curr.next   #nextNode points to 6 .. now nextNode points to 15
+            curr.next = prev      #now curr.next points to None .. now curr.next ponts to head
+            prev = curr     #prev points to head..now prev points to 6
+            curr = nextNode  # curr points to 6 .. curr points to 15
+
+        head = prev     
+        return head
+    
+    def printLL(self, head: Optional[ListNode]):
+        curr = head  
+        while curr != None:      
             print(curr.val)
-            curr = curr.next 
-        return None 
+            curr = curr.next         
     
 if __name__ == "__main__":
     solution = Solution()
-    head = ListNode(4, ListNode(6, ListNode (1, None)))
-    solution.reverseList(head)
+    head = ListNode(5, ListNode(6, ListNode (1, None)))
+    head2 = solution.reverseList(head)
+    solution.printLL(head2)
 
             
         
