@@ -17,6 +17,16 @@ class ListNode:
 
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        curr = head  
+        while curr.next != None:      
+            print(curr.val)
+            curr = curr.next 
         return None 
+    
+if __name__ == "__main__":
+    solution = Solution()
+    head = ListNode(4, ListNode(6, ListNode (1, None)))
+    solution.reverseList(head)
+
             
         
