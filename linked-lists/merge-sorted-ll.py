@@ -13,7 +13,43 @@ class ListNode:
 
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-        return None 
+        head1 = list1 
+        head2 = list2 
+        head3 = ListNode(0,None)
+        head3initial = head3 
+        while head1.next != None and head2.next != None:
+            if head1.val <= head2.val:
+                head3.val = head1.val
+                print("copied from list1")
+                head1 = head1.next 
+                head3.next = ListNode(0, None)
+                head3 = head3.next
+            if head2.val < head1.val:
+                head3.val = head2.val 
+                print("copied from list2")
+                head2 = head2.next
+                head3.next = ListNode(0, None)
+                head3 = head3.next
+
+        if head1.next == None:
+            while head2 != None: 
+                head3.val = head2.val
+                print("copied from list2")
+                head3.next = ListNode(0,None)
+                head3 = head3.next
+                head2 = head2.next                
+
+        if head2 == None:
+            while head1 != None: 
+                head3.val = head1.val
+                print("copied from list1")
+                head3.next = ListNode(0,None)
+                head3 = head3.next
+                head1 = head1.next                 
+
+        # if head1 != None 
+
+        return head3initial
     
     
     def printLL(self, head: Optional[ListNode]):
@@ -24,5 +60,9 @@ class Solution:
     
 if __name__ == "__main__":
     solution = Solution()
+    list1 = ListNode(2, ListNode(4, ListNode (6, None)))
+    list2 = ListNode(1, ListNode(3, ListNode (5, ListNode(6, None))))
+    list3 = solution.mergeTwoLists(list1,list2)
+    solution.printLL(list3)
 
         
