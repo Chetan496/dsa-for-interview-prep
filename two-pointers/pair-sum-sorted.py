@@ -21,8 +21,18 @@ from typing import List
 
 class Solution:
   def twoSum(self, numbers: List[int], target: int) -> List[int]:
-      return [1,2]
-      pass    
+      l = 0 #left ptr
+      r = len(numbers) - 1 #right ptr
+
+      while l < r:
+         if numbers[l] + numbers[r] > target:
+            r = r - 1
+         if numbers[l] + numbers[r] < target:
+            l = l + 1 
+         if numbers[l] + numbers[r] == target:
+            return [l,r]        
+      return []
+      
   
 if __name__ == "__main__":
     solution = Solution()
@@ -31,4 +41,4 @@ if __name__ == "__main__":
     pair = solution.twoSum(list, target)
     print(len(pair))
     if len(pair) > 0:
-       print("The two numbers whose sum is {} are {} and {}".format(target, pair[0], pair[1]) )
+       print("The two numbers whose sum is {} are at index {} and {}. These numbers are {} and {}".format(target, pair[0], pair[1], list[pair[0]], list[pair[1]]) )
